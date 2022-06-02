@@ -16,3 +16,10 @@ spec:
   install:
     remediation:
       retries: 3
+  values:
+    grafana:
+      ingress:
+        enabled: true
+        ngressClassName: nginx
+        hosts:
+        - grafana.samuelbagattin.com
