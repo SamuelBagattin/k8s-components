@@ -1,31 +1,25 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: contour
+  name: nginx
 spec:
-  releaseName: contour
+  releaseName: nginx
   chart:
     spec:
-      chart: contour
+      chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: ingress-nginx
         namespace: flux-system
-      version: "7.x"
+      version: "4.x"
   interval: 1h0m0s
   install:
     remediation:
       retries: 3
   values:
-    contour:
-      image:
-        repository: projectcontour/contour
-        tag: v1.20.1
-    envoy:
-      image:
-        repository: envoyproxy/envoy
-        tag: v1.21.1
+    controller:
       service:
+        type: NodePort
         nodePorts:
           http: 32080
           https: 32443
