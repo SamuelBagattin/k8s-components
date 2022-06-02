@@ -17,6 +17,9 @@ spec:
     remediation:
       retries: 3
   values:
+    image:
+      repository: projectcontour/contour
+      tag: v1.20.1
     envoy:
       service:
         nodePorts:
