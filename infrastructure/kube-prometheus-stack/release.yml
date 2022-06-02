@@ -20,6 +20,6 @@ spec:
     grafana:
       ingress:
         enabled: true
-        ngressClassName: nginx
+        ingressClassName: nginx
         hosts:
         - grafana.samuelbagattin.com
