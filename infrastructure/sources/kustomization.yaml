@@ -7,3 +7,4 @@ resources:
   - prometheus-community.yml
   - bitnami.yaml
   - ingress-nginx.yaml
+  - grafana.yaml
