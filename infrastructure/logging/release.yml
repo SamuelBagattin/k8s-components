@@ -13,9 +13,6 @@ spec:
         namespace: flux-system
       version: "2.x"
   interval: 1h0m0s
-  upgrade:
-    cleanupOnFail: true
-    force: true
   install:
     remediation:
       retries: 3

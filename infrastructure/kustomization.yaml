@@ -5,4 +5,3 @@ resources:
   - nginx
   - kube-prometheus-stack
   - node-problem-detector
-  - logging
