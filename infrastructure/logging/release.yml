@@ -16,3 +16,25 @@ spec:
   install:
     remediation:
       retries: 3
+  values:
+    replicas: 1
+    persistence:
+      enabled: false
+    resources:
+      limits:
+        cpu: "1"
+        memory: "4Gi"
+    initResources:
+      limits:
+        cpu: "25m"
+        memory: "128Mi"
+      requests:
+        cpu: "25m"
+        memory: "128Mi"
+    sidecarResources:
+      limits:
+        cpu: "25m"
+        memory: "128Mi"
+      requests:
+        cpu: "25m"
+        memory: "128Mi"
