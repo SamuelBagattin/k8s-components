@@ -24,7 +24,7 @@ spec:
           access: proxy
           uid: loki
           url: http://loki-stack.svc.cluster.local:3100
-          isDefault: false
+          is_default: false
       grafana.ini:
         users:
           viewers_can_edit: false
