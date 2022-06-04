@@ -23,10 +23,6 @@ spec:
           type: loki
           access: proxy
           url: http://loki-stack.svc.cluster.local:3100
-        - name: Prometheus
-          type: prometheus
-          access: proxy
-          url: http://kube-prometheus-stack-prometheus:9100
       grafana.ini:
         users:
           viewers_can_edit: false
