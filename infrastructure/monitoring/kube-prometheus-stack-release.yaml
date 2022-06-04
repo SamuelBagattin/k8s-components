@@ -18,6 +18,11 @@ spec:
       retries: 3
   values:
     grafana:
+      additionalDataSources:
+        - name: Loki
+          type: loki
+          access: proxy
+          url: http://loki-stack.svc.cluster.local:3100
       grafana.ini:
         users:
           viewers_can_edit: false
