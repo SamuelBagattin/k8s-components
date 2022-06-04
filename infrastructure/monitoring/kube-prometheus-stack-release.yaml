@@ -22,6 +22,7 @@ spec:
         - name: Loki
           type: loki
           access: proxy
+          uid: loki
           url: http://loki-stack.svc.cluster.local:3100
           default: false
       grafana.ini:
