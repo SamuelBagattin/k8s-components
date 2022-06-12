@@ -18,13 +18,56 @@ spec:
       retries: 3
   values:
     grafana:
-      #dditionalDataSources:
-      #  - name: Loki
-      #    type: loki
-      #    access: proxy
-      #    uid: loki
-      #    url: http://loki-stack.svc.cluster.local:3100
-      #    isDefault: false
+      replicas: 1
+      deploymentStrategy:
+        type: Recreate
+      sidecar:
+        dashboards:
+          enabled: true
+          label: grafana_dashboard
+          labelValue: "true"
+          multicluster:
+            global:
+              enabled: false
+            etcd:
+              enabled: false
+          provider:
+            allowUiUpdates: true
+            foldersFromFilesStructure: true
+            updateIntervalSeconds: 30
+            disableDelete: false
+      persistence:
+        enabled: false
+      plugins:
+        - grafana-clock-panel
+        - camptocamp-prometheus-alertmanager-datasource
+        - grafana-piechart-panel
+        - marcusolsson-json-datasource
+      dashboardProviders:
+        dashboardproviders.yaml:
+          apiVersion: 1
+          providers:
+            - name: 'root'
+              orgId: 1
+              type: file
+              updateIntervalSeconds: 10
+              disableDeletion: true
+              editable: false
+              options:
+                path: /var/lib/grafana/dashboards
+
+      datasources:
+        datasources.yaml:
+          apiVersion: 1
+          datasources:
+            - name: Prometheus
+              type: prometheus
+              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local
+              isDefault: true
+              access: proxy
+              jsonData:
+                timeout: 120s
+                queryTimeout: 120s
       grafana.ini:
         users:
           viewers_can_edit: false
