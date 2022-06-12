@@ -23,5 +23,5 @@ spec:
         memory: "4Gi"
     persistence:
       enabled: true
-      name:
+      name: influxdb2
       size: "10Gi"
