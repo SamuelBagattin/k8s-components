@@ -4,5 +4,9 @@ metadata:
   name: influxdb2
 spec:
   storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 10Gi
   hostPath:
     path: /data/influxdb2
