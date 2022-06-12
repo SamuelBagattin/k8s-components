@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: foo-pvc
+  name: influxdb2
 spec:
   storageClassName: ""
   volumeName: influxdb2
