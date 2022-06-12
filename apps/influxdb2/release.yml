@@ -25,3 +25,7 @@ spec:
       enabled: true
       name: influxdb2
       size: "10Gi"
+    ingress:
+      enabled: true
+      ingressClassName: nginx
+      hostname: influxdb.samuelbagattin.com
