@@ -62,7 +62,7 @@ spec:
           datasources:
             - name: Prometheus
               type: prometheus
-              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local
+              url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local
               isDefault: true
               access: proxy
               jsonData:
