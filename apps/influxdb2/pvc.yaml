@@ -5,5 +5,8 @@ metadata:
 spec:
   storageClassName: ""
   volumeName: influxdb2
+  resources:
+    requests:
+      storage: 10Gi
   accessModes:
     - ReadWriteOnce
