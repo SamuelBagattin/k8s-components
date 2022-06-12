@@ -23,6 +23,7 @@ spec:
         memory: "4Gi"
     persistence:
       enabled: true
+      useExisting: true
       name: influxdb2
       size: "10Gi"
     ingress:
