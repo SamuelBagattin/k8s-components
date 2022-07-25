@@ -4,3 +4,4 @@ resources:
   - echo
   - sources
   - influxdb2
+  - home-sensors
