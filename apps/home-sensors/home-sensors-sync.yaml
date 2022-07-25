@@ -10,7 +10,7 @@ spec:
     branch: master
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/samuelbagattin/homes-sensors
+  url: https://github.com/SamuelBagattin/home-sensors.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
