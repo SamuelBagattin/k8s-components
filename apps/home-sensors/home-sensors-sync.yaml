@@ -16,7 +16,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: home-sensors-grafana-dashboard
-  namespace: monitoring
+  namespace: home-sensors
 spec:
   interval: 10m0s
   path: ./kubernetes/grafana-dashboards
