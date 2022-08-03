@@ -65,15 +65,15 @@ spec:
               url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
               isDefault: true
               access: proxy
-            - name: Loki
-              type: loki
-              url: http://loki-stack.monitoring.svc.cluster.local:3100
-              isDefault: false
-              access: proxy
-            - name: InfluxDB
-              type: influxdb
-              url: http://influxdb2.influxdb2.svc.cluster.local
-              isDefault: false
+#            - name: Loki
+#              type: loki
+#              url: http://loki-stack.monitoring.svc.cluster.local:3100
+#              isDefault: false
+#              access: proxy
+#            - name: InfluxDB
+#              type: influxdb
+#              url: http://influxdb2.influxdb2.svc.cluster.local
+#              isDefault: false
       grafana.ini:
         users:
           viewers_can_edit: false
