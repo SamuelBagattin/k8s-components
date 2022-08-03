@@ -5,3 +5,4 @@ resources:
   - namespace.yaml
   - kube-prometheus-stack-release.yaml
   - loki-stack-release.yml
+  - grafana-dashboards
