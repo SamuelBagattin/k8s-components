@@ -56,7 +56,7 @@ spec:
               options:
                 path: /var/lib/grafana/dashboards
 
-      datasources:
+#      datasources:
 #        datasources.yaml:
 #          apiVersion: 1
 #          datasources:
