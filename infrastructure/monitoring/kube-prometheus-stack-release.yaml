@@ -70,17 +70,6 @@ spec:
             isDefault: false
             jsonData: {}
             readOnly: false
-          - name: Prometheus
-            type: prometheus
-            access: proxy
-            url: http://kube-prometheus-stack-prometheus.monitoring:9090/
-            user: ''
-            database: ''
-            basicAuth: false
-            isDefault: true
-            jsonData:
-              timeInterval: 30s
-            readOnly: true
           - name: InfluxDB
             type: influxdb
             access: proxy
