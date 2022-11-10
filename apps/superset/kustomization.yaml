@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: influxdb2
+resources:
+  - namespace.yaml
+  - superset-release.yml
+  - trino-ingress.yaml
+  - trino-release.yml
