@@ -11,26 +11,8 @@ spec:
         kind: HelmRepository
         name: trino
         namespace: flux-system
-      version: "x.x.x"
+      version: "0.8.0"
   interval: 1h0m0s
   install:
     remediation:
       retries: 3
-  values:
-    ingress:
-      ingressClassName: nginx
-      enabled: true
-      hosts:
-        - trino.samuelbagattin.com
-      path: /
-      pathType: ImplementationSpecific
-    redis:
-      enabled: true
-      master:
-        persistence:
-          enabled: false
-    postgresql:
-      enabled: true
-      primary:
-        persistence:
-          enabled: false
