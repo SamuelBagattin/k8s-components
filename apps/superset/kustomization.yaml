@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: superset
 resources:
   - namespace.yaml
-  - superset-release.yml
+  #- superset-release.yml
   - trino-ingress.yaml
-  - trino-release.yml
+  #- trino-release.yml
