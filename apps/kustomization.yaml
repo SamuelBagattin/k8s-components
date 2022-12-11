@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
   - echo
   - sources
-  - influxdb2
   - home-sensors
   - opensearch

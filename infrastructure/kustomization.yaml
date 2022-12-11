@@ -4,4 +4,3 @@ resources:
   - sources
   - nginx
   - monitoring
-  - cert-manager
