@@ -26,4 +26,9 @@ spec:
       hosts:
         - opensearch.samuelbagattin.com
     persistence:
-      enabled: false
+      enabled: true
+      storageClass: ""
+      accessModes:
+        - ReadWriteOnce
+      size: 10Gi
+
