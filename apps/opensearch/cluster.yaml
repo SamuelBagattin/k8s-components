@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   initHelper:
-    image: "busybox"
+    image: "public.ecr.aws/opsterio/busybox:1.27.2-buildx-arm"
   general:
     serviceName: my-first-cluster
     version: 2.4.0
