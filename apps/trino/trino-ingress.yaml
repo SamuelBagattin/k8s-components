@@ -11,7 +11,7 @@ spec:
         paths:
           - backend:
               service:
-                name: superset-trino
+                name: trino
                 port:
                   number: 8080
             path: /
