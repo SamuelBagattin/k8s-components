@@ -5,5 +5,4 @@ resources:
   - sources
   - influxdb2
   - home-sensors
-  - trino
   - opensearch
