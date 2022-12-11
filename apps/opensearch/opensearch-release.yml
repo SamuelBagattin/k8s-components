@@ -15,7 +15,7 @@ spec:
   interval: 1h0m0s
   install:
     remediation:
-      retries: 2
+      retries: 1
   values:
     replicas: 1
     ingress:
