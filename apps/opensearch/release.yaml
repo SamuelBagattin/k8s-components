@@ -16,3 +16,12 @@ spec:
   install:
     remediation:
       retries: 1
+  values:
+    manager:
+      resources:
+        limits:
+          cpu: 200m
+          memory: 500Mi
+        requests:
+          cpu: 100m
+          memory: 350Mi

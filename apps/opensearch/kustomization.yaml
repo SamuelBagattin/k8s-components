@@ -4,3 +4,4 @@ namespace: opensearch
 resources:
   - namespace.yaml
   - release.yaml
+  - cluster.yaml
