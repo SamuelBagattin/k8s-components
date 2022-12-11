@@ -7,3 +7,4 @@ resources:
   - superset.yaml
   - trino.yaml
   - opensearch.yaml
+  - opensearch-operator.yaml
