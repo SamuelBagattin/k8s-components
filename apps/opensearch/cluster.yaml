@@ -23,6 +23,7 @@ spec:
   nodePools:
     - component: masters
       replicas: 1
+      jvm: -Xmx8192M -Xms4096M
       diskSize: "5Gi"
       resources:
         requests:
