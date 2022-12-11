@@ -18,6 +18,9 @@ spec:
       retries: 1
   values:
     replicas: 1
+    singleNode: true
+    podSecurityContext: {}
+    securityContext: {}
     ingress:
       enabled: true
       ingressClassName: nginx
