@@ -19,8 +19,8 @@ spec:
   values:
     replicas: 1
     singleNode: true
-    podSecurityContext: {}
-    securityContext: {}
+    extraEnvs:
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
     ingress:
       enabled: true
       ingressClassName: nginx
