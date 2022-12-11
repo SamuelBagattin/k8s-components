@@ -23,14 +23,14 @@ spec:
   nodePools:
     - component: masters
       replicas: 1
-      jvm: -Xmx8192M -Xms4096M
+      jvm: -Xmx6000M -Xms6000M
       diskSize: "5Gi"
       resources:
         requests:
-          memory: "2Gi"
+          memory: "12Gi"
           cpu: "500m"
         limits:
-          memory: "2Gi"
+          memory: "12Gi"
           cpu: "500m"
       roles:
         - "data"
