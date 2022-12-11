@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: opensearch
 resources:
   - namespace.yaml
-  - release.yml
+  - release.yaml
