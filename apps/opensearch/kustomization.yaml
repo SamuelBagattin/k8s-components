@@ -4,4 +4,4 @@ namespace: opensearch
 resources:
   - namespace.yaml
   - opensearch-dashboards-release.yml
-  - opensearch-release.yml
+ # - opensearch-release.yml
