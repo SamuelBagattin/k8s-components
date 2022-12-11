@@ -22,7 +22,6 @@ spec:
     - component: masters
       replicas: 1
       diskSize: "5Gi"
-      NodeSelector:
       resources:
         requests:
           memory: "2Gi"
@@ -33,3 +32,5 @@ spec:
       roles:
         - "data"
         - "master"
+      persistence:
+        emptyDir: { }
