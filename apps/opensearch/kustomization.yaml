@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: opensearch
+resources:
+  - namespace.yaml
+  - opensearch-dashboards-release.yml
+  - opensearch-release.yml

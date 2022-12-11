@@ -6,3 +6,4 @@ resources:
   - influxdb2
   - home-sensors
   - superset
+  - opensearch
