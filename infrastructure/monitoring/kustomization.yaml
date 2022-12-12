@@ -6,5 +6,4 @@ resources:
   - kube-prometheus-stack-release.yaml
   - loki-stack-release.yml
   - grafana-dashboards
-  - elasticsearch-release.yaml
-  - kibana-release.yaml
+  - eck-operator-release.yaml
