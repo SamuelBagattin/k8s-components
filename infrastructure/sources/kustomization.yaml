@@ -9,3 +9,4 @@ resources:
   - ingress-nginx.yaml
   - grafana.yaml
   - jetstack.yaml
+  - elastic.yml
