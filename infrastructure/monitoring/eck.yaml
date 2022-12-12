@@ -24,6 +24,45 @@ spec:
       config:
         node.store.allow_mmap: false
 ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: elasticsearch
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-ssl-verify: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: elasticsearch.samuelbagattin.com
+      http:
+          paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                  name: main-es-http
+                  port:
+                   name: https
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kibana
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: kibana.samuelbagattin.com
+      http:
+          paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                  name: main-kb-http
+                  port:
+                   name: https
+---
 apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
 metadata:
