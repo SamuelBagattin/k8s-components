@@ -134,7 +134,7 @@ spec:
   kibanaRef:
     name: kibana-quickstart
   elasticsearchRefs:
-    - name: elasticsearch-quickstart
+    - name: main
   mode: fleet
   fleetServerEnabled: true
   deployment:
