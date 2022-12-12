@@ -73,6 +73,8 @@ metadata:
 spec:
   version: 8.5.3
   count: 1
+  config:
+    server.publicBaseUrl: https://kibana.samuelbagattin.com
   elasticsearchRef:
     name: main
   podTemplate:
