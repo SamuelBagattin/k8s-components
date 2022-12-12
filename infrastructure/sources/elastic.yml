@@ -4,4 +4,4 @@ metadata:
   name: elastic
 spec:
   interval: 30m
-  url: prometheus-community.yml
+  url: https://helm.elastic.co
