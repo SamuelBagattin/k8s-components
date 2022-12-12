@@ -132,7 +132,7 @@ metadata:
 spec:
   version: 8.5.3
   kibanaRef:
-    name: kibana-quickstart
+    name: main
   elasticsearchRefs:
     - name: main
   mode: fleet
