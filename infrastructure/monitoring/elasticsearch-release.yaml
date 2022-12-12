@@ -17,6 +17,7 @@ spec:
     remediation:
       retries: 3
   values:
+    createCert: false
     replicas: 1
     persistence:
       enabled: false
