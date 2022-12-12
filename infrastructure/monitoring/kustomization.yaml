@@ -7,3 +7,4 @@ resources:
   - loki-stack-release.yml
   - grafana-dashboards
   - elasticsearch-release.yaml
+  - kibana-release.yaml
