@@ -7,4 +7,4 @@ resources:
   - loki-stack-release.yml
   - grafana-dashboards
   - eck-operator-release.yaml
-  - eck.yaml
+  #- eck.yaml
