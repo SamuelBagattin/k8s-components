@@ -7,6 +7,18 @@ spec:
   nodeSets:
     - name: default
       count: 1
+      volumeClaimTemplates:
+        - apiVersion: v1
+          kind: PersistentVolumeClaim
+          metadata:
+            name: elasticsearch-data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 5Gi
+            volumeName: elasticsearch-data
       podTemplate:
         spec:
           containers:
@@ -18,10 +30,6 @@ spec:
                 limits:
                   cpu: 2000m
                   memory: 2Gi
-          volumes:
-            - name: elasticsearch-data
-              persistentVolumeClaim:
-                claimName: elasticsearch-data
       config:
         node.store.allow_mmap: false
 ---
