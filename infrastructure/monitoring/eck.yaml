@@ -215,3 +215,15 @@ spec:
   count: 1
   elasticsearchRef:
     name: main
+  kibanaRef:
+    name: main
+---
+apiVersion: maps.k8s.elastic.co/v1alpha1
+kind: ElasticMapsServer
+metadata:
+  name: main
+spec:
+  version: "7.13"
+  count: 1
+  elasticsearchRef:
+    name: main
