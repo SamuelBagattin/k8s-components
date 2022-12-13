@@ -113,6 +113,8 @@ spec:
               name: system
   elasticsearchRef:
     name: main
+  enterpriseSearchRef:
+    name: main
   podTemplate:
     spec:
       containers:
@@ -227,3 +229,34 @@ spec:
   count: 1
   elasticsearchRef:
     name: main
+---
+apiVersion: enterprisesearch.k8s.elastic.co/v1
+kind: EnterpriseSearch
+metadata:
+  name: main
+spec:
+  version: 8.5.3
+  count: 1
+  elasticsearchRef:
+    name: main
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: enterprise-search
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-ssl-verify: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: enterprise-search.samuelbagattin.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-ent-http
+                port:
+                  name: https
