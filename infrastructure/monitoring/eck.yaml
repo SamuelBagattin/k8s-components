@@ -205,3 +205,13 @@ roleRef:
   kind: ClusterRole
   name: elastic-agent
   apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: apm.k8s.elastic.co/v1
+kind: ApmServer
+metadata:
+  name: main
+spec:
+  version: 8.5.3
+  count: 1
+  elasticsearchRef:
+    name: main
