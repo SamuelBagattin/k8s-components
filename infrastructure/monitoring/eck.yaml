@@ -260,6 +260,8 @@ spec:
   version: 8.5.3
   count: 1
   config:
+    ent_search:
+      external_url: https://enterprise-search.samuelbagattin.com
     kibana:
       external_url: https://kibana.samuelbagattin.com
   elasticsearchRef:
