@@ -259,6 +259,9 @@ metadata:
 spec:
   version: 8.5.3
   count: 1
+  config:
+    kibana:
+      external_url: https://kibana.samuelbagattin.com
   elasticsearchRef:
     name: main
 ---
